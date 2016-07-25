@@ -1,0 +1,13 @@
+<table class="table">
+<thead>
+<tr>
+  <th>Title</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+  {{#each model key="id" as |item|}}
+    {{events/event-row item=item}}
+  {{/each}}
+</tbody>
+</table>

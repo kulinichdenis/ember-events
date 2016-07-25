@@ -4,6 +4,11 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'traveller',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: { apiKey: "AIzaSyDth2k-vZ8LtF8KKaJK-q7OXQa7c8LuvlI",
+    authDomain: "travell-events.firebaseapp.com",
+    databaseURL: "https://travell-events.firebaseio.com",
+    storageBucket: "travell-events.appspot.com" },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -20,7 +25,6 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
